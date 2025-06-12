@@ -18,7 +18,41 @@ class Reflection(BaseModel):
         description="A list of follow-up queries to address the knowledge gap."
     )
 ```
-3. `prompts.py`: 编写给 Agent 的提示词工程。例子：里面的 `reflection_instructions`是在 prompt-level 上让 当前 Node 上的 Agent 具有 思考搜集资料是否充足 的能力。<br>
+3. `prompts.py`: 编写给 Agent 的提示词工程。例子：里面的 `reflection_instructions`是在 prompt-level 上让 当前 Node 上的 Agent 具有 思考搜集资料是否充足 的能力，如下：<br>
+<details>
+<summary>点击展开/折叠</summary>
+reflection_instructions = """You are an expert research assistant analyzing summaries about "{research_topic}".
+
+Instructions:
+- Identify knowledge gaps or areas that need deeper exploration and generate a follow-up query. (1 or multiple).
+- If provided summaries are sufficient to answer the user's question, don't generate a follow-up query.
+- If there is a knowledge gap, generate a follow-up query that would help expand your understanding.
+- Focus on technical details, implementation specifics, or emerging trends that weren't fully covered.
+
+Requirements:
+- Ensure the follow-up query is self-contained and includes necessary context for web search.
+
+Output Format:
+- Format your response as a JSON object with these exact keys:
+   - "is_sufficient": true or false
+   - "knowledge_gap": Describe what information is missing or needs clarification
+   - "follow_up_queries": Write a specific question to address this gap
+
+Example:
+```json
+{{
+    "is_sufficient": true, // or false
+    "knowledge_gap": "The summary lacks information about performance metrics and benchmarks", // "" if is_sufficient is true
+    "follow_up_queries": ["What are typical performance benchmarks and metrics used to evaluate [specific technology]?"] // [] if is_sufficient is true
+}}
+```
+
+Reflect carefully on the Summaries to identify knowledge gaps and produce a follow-up query. Then, produce your output following this JSON format:
+
+Summaries:
+{summaries}
+"""
+</details>
 
 4. `utils.py`: 创建可复用的辅助函数、工具。如：加入引用编号。<br>
    
