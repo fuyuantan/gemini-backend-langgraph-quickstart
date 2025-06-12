@@ -5,7 +5,7 @@ class Query(TypedDict):
     rationale: str
 ```
 
-2. `tools_and_schemas.py`: 定义 Node 上面的 LLM Agent 的输出结构。如下，定义了 Reflection Node 上的 LLM 输出包含 `is_sufficient`，`knowledge_gap` 和 `follow_up_queries`。<br>
+2. `tools_and_schemas.py`: 定义 Node 上面的 LLM Agent 的输出结构。如下，定义了 reflection Node 上的 LLM 输出包含 `is_sufficient`，`knowledge_gap` 和 `follow_up_queries`。<br>
 ```
 class Reflection(BaseModel):
     is_sufficient: bool = Field(
@@ -18,9 +18,10 @@ class Reflection(BaseModel):
         description="A list of follow-up queries to address the knowledge gap."
     )
 ```
-3. `prompts.py`: 编写给 Agent 的提示词工程。例子：里面的 `reflection_instructions`是在 prompt-level 上让 当前 Node 上的 Agent 具有 思考搜集资料是否充足 的能力，如下：<br>
+3. `prompts.py`: 编写给 Agent 的提示词工程。例子：里面的 `reflection_instructions`是在 prompt-level 上让 当前 reflection Node 上的 Agent 具有 思考搜集资料是否充足 的能力，如下：<br>
 <details>
-<summary>点击展开/折叠</summary>
+<summary>reflection_instructions</summary>
+```
 reflection_instructions = """You are an expert research assistant analyzing summaries about "{research_topic}".
 
 Instructions:
@@ -52,6 +53,7 @@ Reflect carefully on the Summaries to identify knowledge gaps and produce a foll
 Summaries:
 {summaries}
 """
+```
 </details>
 
 4. `utils.py`: 创建可复用的辅助函数、工具。如：加入引用编号。<br>
