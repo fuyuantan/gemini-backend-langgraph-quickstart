@@ -16,7 +16,7 @@
     )
    ```
    is added for solving the error of ``AttributeError: 'Configuration' object has no attribute 'reasoning_model'``<br>
-3. Fixed bug: In ``graph.py``, ``llm = ChatGoogleGenerativeAI(...)`` are added a new param ``transport="rest"`` for solving the error of gRPC connection timeout.<br>
+3. Fixed bug: In ``graph.py``, ``llm = ChatGoogleGenerativeAI(...)`` are added a new param ``transport="rest"`` for solving the error of gRPC connection timeout, ``Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.99.95:443: socket is null.``.<br>
 
 **Outputs:**<br>
 You can see, `run.py` visualizes the contents of  **Node**, **State**.
