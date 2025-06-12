@@ -21,6 +21,7 @@ class Reflection(BaseModel):
 3. `prompts.py`: 编写给 Agent 的提示词工程。例子：里面的 `reflection_instructions`是在 prompt-level 上让 当前 reflection Node 上的 Agent 具有 思考搜集资料是否充足 的能力，如下：<br>
 <details>
 <summary>reflection_instructions</summary>
+```
 reflection_instructions = """You are an expert research assistant analyzing summaries about "{research_topic}".
 
 Instructions:
@@ -52,6 +53,7 @@ Reflect carefully on the Summaries to identify knowledge gaps and produce a foll
 Summaries:
 {summaries}
 """
+```
 </details>
 
 4. `utils.py`: 创建可复用的辅助函数、工具。如：加入引用编号。<br>
