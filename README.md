@@ -6,7 +6,8 @@
 
 **News/Differences:**<br>
 1. `run.py` is newly created for starting this agent.<br>
-2. Fixed bug: In `configuration.py`,
+2. Fixed bug:
+   In `configuration.py`,
    ```
    reasoning_model: str = Field(
         default="gemini-2.5-flash-preview-04-17",
@@ -16,7 +17,8 @@
     )
    ```
    is added for resolving the error of ``AttributeError: 'Configuration' object has no attribute 'reasoning_model'``<br>
-3. Fixed bug: In ``graph.py``, a new parameter ``transport="rest"`` is added to ``llm = ChatGoogleGenerativeAI(...)`` to resolve the following gRPC connection timeout error:<br>
+4. Fixed bug:
+   In ``graph.py``, a new parameter ``transport="rest"`` is added to ``llm = ChatGoogleGenerativeAI(...)`` to resolve the following gRPC connection timeout error:<br>
 `Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.99.95:443: socket is null.`
 
 Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds a
