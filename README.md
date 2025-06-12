@@ -5,7 +5,7 @@
 4. Run `python run.py`.<br>
 
 **News/Differences:**<br>
-1. A new .py file, `run.py`, is created for starting this agent.<br>
+1. `run.py` is newly created for starting this agent.<br>
 2. Fixed bug: In `configuration.py``,
    ```
    reasoning_model: str = Field(
