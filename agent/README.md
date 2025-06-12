@@ -53,7 +53,7 @@ Summaries:
 {summaries}
 """
 </details>
-***
+
 4. `utils.py`: 创建可复用的辅助函数、工具。如：加入引用编号。<br>
    
 5. `configuration.py`: 管理 Agent 的配置参数，比如选择哪种模型，`default="gemini-2.5-pro-preview-05-06"`，和 Agent description。<br>
