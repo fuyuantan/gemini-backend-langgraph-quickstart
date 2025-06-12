@@ -31,6 +31,6 @@ You can see, `run.py` visualizes the contents of  **Node**, **State**.
 
 The **introductions/tutorials** of each .py file of `/Agent` is in the [README.md](https://github.com/fuyuantan/gemini-backend-langgraph-quickstart/tree/main/agent) under the `/Agent`.<br>
 
-You can find me in [小红书](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447).
+You can find me in [小红书](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447). Welcome to star this repo!
 
 Refer/Origin: https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart/tree/main
