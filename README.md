@@ -29,4 +29,6 @@ You can see, `run.py` visualizes the contents of  **Node**, **State**.
 
 ![3](https://github.com/user-attachments/assets/935bf097-5100-44a7-9594-6bb1e5b20e07)
 
+The introductions/materials of each .py file of `/Agent` is in the [README.md](https://github.com/fuyuantan/gemini-backend-langgraph-quickstart/tree/main/agent) under the `/Agent`.<br>
+
 Refer/Origin: https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart/tree/main
