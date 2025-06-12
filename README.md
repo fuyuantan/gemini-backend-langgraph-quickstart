@@ -1,12 +1,12 @@
 **Only 4 steps to run this Agent:**<br>
-1. Clone ``git clone https://github.com/fuyuantan/gemini-backend-langgraph-quickstart``<br>
-2. Install dependencies ``pip install google-generativeai langchain-google-genai langgraph``<br>
+1. Clone `git clone https://github.com/fuyuantan/gemini-backend-langgraph-quickstart`<br>
+2. Install dependencies `pip install google-generativeai langchain-google-genai langgraph`<br>
 3. Set your **GEMINI_API_KEY** in ``.env`` file.<br>
 4. Run `python run.py`.<br>
 
 **News/Differences:**<br>
 1. `run.py` is newly created for starting this agent.<br>
-2. Fixed bug: In `configuration.py``,
+2. Fixed bug: In `configuration.py`,
    ```
    reasoning_model: str = Field(
         default="gemini-2.5-flash-preview-04-17",
