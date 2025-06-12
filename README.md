@@ -21,8 +21,6 @@
    In ``graph.py``, a new parameter ``transport="rest"`` is added to ``llm = ChatGoogleGenerativeAI(...)`` to resolve the following gRPC connection timeout error:<br>
 `Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.99.95:443: socket is null.`
 
-Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds a
-
 **Outputs:**<br>
 You can see, `run.py` visualizes the contents of  **Node**, **State**.
 ![1](https://github.com/user-attachments/assets/45e20e3b-1a22-4531-ab04-d7fcf298840c)
