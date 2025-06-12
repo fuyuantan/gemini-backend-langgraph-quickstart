@@ -6,8 +6,17 @@
 
 **News/Differences:**<br>
 1. A new .py file, `run.py`, is created for start this agent.<br>
-2. Fix bug: ``AttributeError: 'Configuration' object has no attribute 'reasoning_model'``<br>
-3. In ``graph.py``, ``llm = ChatGoogleGenerativeAI(...)`` are added a new param ``transport="rest"`` for solving the problem of gRPC connection timeout.<br>
+2. Fixed bug: In `configuration.py``,
+   ```
+   reasoning_model: str = Field(
+        default="gemini-2.5-flash-preview-04-17",
+        metadata={
+            "description": "The name of the language model to use for the agent's reasoning."
+        },
+    )
+   ```
+   is added for solving the problem of ``AttributeError: 'Configuration' object has no attribute 'reasoning_model'``<br>
+4. Fixed bug: In ``graph.py``, ``llm = ChatGoogleGenerativeAI(...)`` are added a new param ``transport="rest"`` for solving the problem of gRPC connection timeout.<br>
 
 Outputs:<br>
 You can see, `run.py` visualize the contents of  **Node**, **State**.
