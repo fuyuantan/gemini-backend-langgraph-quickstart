@@ -66,7 +66,7 @@ def generate_query(state: OverallState, config: RunnableConfig) -> QueryGenerati
         temperature=1.0,
         max_retries=2,
         api_key=os.getenv("GEMINI_API_KEY"),
-        # transport="rest"  # 新加的
+        transport="rest"  # New 新加的
     )
     structured_llm = llm.with_structured_output(SearchQueryList)
 
@@ -170,7 +170,7 @@ def reflection(state: OverallState, config: RunnableConfig) -> ReflectionState:
         temperature=1.0,
         max_retries=2,
         api_key=os.getenv("GEMINI_API_KEY"),
-        # transport="rest"  # 新加的
+        transport="rest"  # New 新加的
     )
     result = llm.with_structured_output(Reflection).invoke(formatted_prompt)
 
@@ -250,7 +250,7 @@ def finalize_answer(state: OverallState, config: RunnableConfig):
         temperature=0,
         max_retries=2,
         api_key=os.getenv("GEMINI_API_KEY"),
-        # transport="rest"  # 新加的
+        transport="rest"  # New 新加的
     )
     result = llm.invoke(formatted_prompt)
 
