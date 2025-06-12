@@ -19,7 +19,7 @@
 3. Fixed bug: In ``graph.py``, ``llm = ChatGoogleGenerativeAI(...)`` are added a new param ``transport="rest"`` for solving the error of gRPC connection timeout.<br>
 
 **Outputs:**<br>
-You can see, `run.py` visualize the contents of  **Node**, **State**.
+You can see, `run.py` visualizes the contents of  **Node**, **State**.
 ![1](https://github.com/user-attachments/assets/45e20e3b-1a22-4531-ab04-d7fcf298840c)
 
 ![2](https://github.com/user-attachments/assets/50489f6b-a54e-4340-a2ca-8b6315dcbd99)
