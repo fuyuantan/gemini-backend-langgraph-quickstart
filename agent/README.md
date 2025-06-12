@@ -1,4 +1,9 @@
-1. `state.py`: 定义全流程的 State。State 表示 流经应用程序的所有信息，类似 Java Spring 编程里面的 DTO、Entity 实体，用于存储信息。<br>
+1. `state.py`: 定义全流程的 State。State 表示 流经应用程序的所有信息，类似 Java Spring 编程里面的 DTO、Entity 实体，含有字段名和属性，用于存储信息。例子如下：<br>
+```
+class Query(TypedDict):
+    query: str
+    rationale: str
+```
 
 2. `tools_and_schemas.py`: 定义 Node 上面的 LLM Agent 的输出结构。如下，定义了 Reflection Node 上的 LLM 输出包含 `is_sufficient`，`knowledge_gap` 和 `follow_up_queries`。<br>
 ```
